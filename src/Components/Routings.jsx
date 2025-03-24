@@ -6,7 +6,6 @@ import Cart from './Pages/Cart'
 import Footer from './Footer'
 import Productdetail from './Pages/Productdetail';
 import AllProducts from './Pages/AllProducts'
-import Loader from './Pages/Loader';
 import  Filter from './Pages/Filter';
 import Login from './Pages/Loginorregister/Login'
 import Register from './Pages/Loginorregister/Register'
