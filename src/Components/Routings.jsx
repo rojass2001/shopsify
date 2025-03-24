@@ -23,7 +23,7 @@ function Routings() {
   
         <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/Shopsify" element={<Home/>} />
+        <Route path="/shopsify" element={<Home/>} />
         <Route path="/details" element={<Productdetail/>} />
         <Route path="/products" element={<AllProducts/>} />
         <Route path="/cart" element={<Cart/>} />
