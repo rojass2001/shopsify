@@ -15,7 +15,7 @@ function DesktopNav() {
   return (
    <div className='nav w-full fixed top-0 right-0 left-0 z-30'>
     <div className=' h-[60px] px-1 flex   items-center  text-white justify-between lg:px-5 '>
-   <p className='text-3xl font-bold'>Shopify</p>
+   <p className='text-3xl font-bold'>Shopsify</p>
     <div className='gap-5 text-[16px] hidden md:flex font-bold'>
   <Link to="/"> <p>Home</p></Link> 
    <Link to="/about">  <p>About</p></Link> 
