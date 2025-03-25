@@ -1,16 +1,18 @@
 import { BrowserRouter as Router,Route,Routes  } from 'react-router-dom'
 import { lazy, Suspense } from 'react'
-import DesktopNav from './Navbar/DesktopNav'
-import  Home from './Pages/Home'
-import Cart from './Pages/Cart'
-import Footer from './Footer'
-import Productdetail from './Pages/Productdetail';
-import AllProducts from './Pages/AllProducts'
-import  Filter from './Pages/Filter';
-import Login from './Pages/Loginorregister/Login'
-import Register from './Pages/Loginorregister/Register'
-import Contact  from'./Pages/Contact'
-import About from './Pages/About'
+const DesktopNav=lazy(()=>import('./Navbar/DesktopNav'))
+const Home=lazy(()=>import('./Pages/Home'))
+const Cart=lazy(()=>import('./Pages/Cart'))
+const Footer=lazy(()=>import( './Footer'))
+import Loader from './Pages/Loader'
+const Productdetail=lazy(()=>import('./Pages/Productdetail'));
+const AllProducts=lazy(()=>import('./Pages/AllProducts')) 
+const Filter=lazy(()=>import('./Pages/Filter'));
+const Login =lazy(()=>import('./Pages/Loginorregister/Login'))
+//import Login from './Pages/Loginorregister/Login'
+const Register =lazy( ()=>import('./Pages/Loginorregister/Register'))
+const Contact =lazy(()=>import('./Pages/Contact'))
+const About=lazy(()=>import('./Pages/About'))
 
 
 function Routings() {
@@ -18,9 +20,9 @@ function Routings() {
     <div className='w-full'>
       
       <Router>
-        
-      <DesktopNav/>
-  
+      <Suspense fallback={<Loader/>}>
+      <DesktopNav />
+ 
         <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/shopsify" element={<Home/>} />
@@ -35,7 +37,7 @@ function Routings() {
         </Routes>
         
         <Footer/>
-       
+        </Suspense>
       </Router>
       
     </div>

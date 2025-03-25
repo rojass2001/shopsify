@@ -1,4 +1,3 @@
-import React from 'react'
 import Hero from '../Hero'
 import Category from '../Category'
 import Topproducts from '../Topproducts'
@@ -9,8 +8,8 @@ function Home() {
     <div className='w-full mt-[123px] md:mt-[60px]'>
      <Hero /> 
     <Category/>
-  <Topproducts/>
-  <Service/>
+   <Topproducts/>
+   <Service/>
     </div>
   )
 }

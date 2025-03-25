@@ -13,36 +13,36 @@ function DesktopNav() {
    setopen(!open)
   }
   return (
-   <div className='nav w-full fixed top-0 right-0 left-0 z-30'>
+<div className='nav w-full fixed top-0 right-0 left-0 z-30'>
     <div className=' h-[60px] px-1 flex   items-center  text-white justify-between lg:px-5 '>
-   <p className='text-3xl font-bold'>Shopsify</p>
+     <p className='text-3xl font-bold'>Shopsify</p>
     <div className='gap-5 text-[16px] hidden md:flex font-bold'>
-  <Link to="/"> <p>Home</p></Link> 
-   <Link to="/about">  <p>About</p></Link> 
+     <Link to="/"> <p>Home</p></Link> 
+     <Link to="/about">  <p>About</p></Link> 
      <Link to="/products"><p>Products</p></Link>
      <Link to="/contact"><p>Contact</p> </Link>
     </div>
-    <Searchbar/>
+     <Searchbar/>
     <div className='flex items-center    '>
-    <Loginicon/>
-    <Link to="/cart">
+     <Loginicon/>
+     <Link to="/cart">
   <div className='h-9 w-9 relative flex place-content-center items-center rounded-full bg-white'>
-   <FaCartShopping className='text-blue-600 text-xl'/>
-   {cartproducts.length>0&&
-   <div className='w-4 h-4  absolute text-sm flex items-center place-content-center rounded-full
-    bg-blue-600 top-[1px] right-1 animate-bounce'>{cartproducts.length}</div>
-}
+    <FaCartShopping className='text-blue-600 text-xl'/>
+    { cartproducts.length>0&&
+    <div className='w-4 h-4  absolute text-sm flex items-center place-content-center rounded-full
+    bg-blue-600 top-[1px] right-1 animate-bounce'>{cartproducts.length}
+    </div>
+    }
    </div></Link>
    <FaBars onClick={navbarpopup} className='md:hidden text-3xl'/>
-  </div>
+   </div>
   
-    </div>
+  </div>
     <Mobilesearchbar/>
     {open&&
       <Mobilenavbar navbarpopup={navbarpopup}/>
    }
-
-    </div>
+</div>
   
   )
 }

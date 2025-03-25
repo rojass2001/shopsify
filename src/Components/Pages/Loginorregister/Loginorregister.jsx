@@ -1,3 +1,4 @@
+import { memo } from "react"
 import { FaLock } from "react-icons/fa"
 import { IoIosContact } from "react-icons/io"
 import { Link } from "react-router-dom"
@@ -27,4 +28,4 @@ function Loginorregister({des,buttonname,link}) {
     )
   }
   
-  export default Loginorregister
+  export default memo(Loginorregister)
