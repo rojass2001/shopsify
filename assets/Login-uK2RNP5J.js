@@ -1,0 +1,1 @@
+import{j as o}from"./index-BMQNpp_i.js";import{L as r}from"./Loginorregister-bs4inPUp.js";import"./index-B3VK_bIM.js";import"./iconBase-Cxwhlsrq.js";function s(){return o.jsx("div",{children:o.jsx(r,{buttonname:"Login",des:"You dont have account please Register",link:"/register"})})}export{s as default};
