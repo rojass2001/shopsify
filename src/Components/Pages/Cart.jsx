@@ -1,10 +1,9 @@
-import React from 'react'
 import { FaStar, FaTrash } from 'react-icons/fa'
 import { useDispatch, useSelector } from 'react-redux'
 import Carttotal from '../Carttotal'
 import { cartdecrease, cartincrease, removecart } from '../../redux/Cartslice'
 const quantitybutton ="bg-black text-white w-9 h-6"
-function Cart() {
+  function Cart() {
   const dispatch=useDispatch()
   const {cartproducts}=useSelector(state=>state.cart)
   return (
@@ -17,7 +16,7 @@ function Cart() {
       {cartproducts?.map((a)=>(
       <div className='w-full mb-5 py-2 h-[280px] md:h-[250px] gap-2 text-black shadow-md shadow-gray-300 flex' key={a.id}>
         <img className='w-[40%] h-full' src={a.image} />
-         <div className='font-bold relative space-y-2'>
+      <div className='font-bold relative space-y-2'>
           <p className='text-2xl'>{a.title.slice(0,38)}</p>
           <p className='text-xl '>${Math.floor(a.price)}</p>
           <p className='flex gap-1 items-center text-xl'><FaStar/>{a.rating}</p>
@@ -26,10 +25,10 @@ function Cart() {
            <button  onClick={()=>dispatch(cartincrease(a.id))} className={quantitybutton}>+</button>
           </div>
         <p>subtotal:${a.subtotal}</p>
-      <div onClick={()=>dispatch(removecart(a))} className='w-14  place-items-center place-content-center   h-7 rounded-full text-xl bg-white shadow-md
-        shadow-gray-300'><FaTrash/>
-       </div>
+        <div onClick={()=>dispatch(removecart(a))} className='w-14  place-items-center place-content-center 
+          h-7 rounded-full text-xl bg-white shadow-mdshadow-gray-300'><FaTrash/>
         </div>
+      </div>
       </div>
     ))  }
     </div>
@@ -38,7 +37,7 @@ function Cart() {
       </div>
      </div>
 }
-     </div>
+  </div>
     
   )
 }
