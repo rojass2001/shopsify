@@ -15,7 +15,7 @@ function Mobilesearchbar() {
   return (
     <form className="flex bg-white w-full" onSubmit={submit}>
       <input className='w-full pl-1 outline-none h-8 text-black' onChange={(e)=>setsearch(e.target.value)} 
-      placeholder='search product here' type="text"  />
+       placeholder='search product here' type="text"  />
       <button type="submit" className='bg-blue-600 p-1 '>search</button>
     </form>
   )
