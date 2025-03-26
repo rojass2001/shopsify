@@ -8,12 +8,12 @@ import Loader from './Loader'
 
 function Home() {
   return (
-    <div className='w-full mt-[123px] md:mt-[60px]'>
+    <div className='w-full mt-[105px] md:mt-[60px]'>
      <Suspense fallback={<Loader/>}>
-     <Hero /> 
-    <Category/>
-   <Topproducts/>
-   <Service/>
+        <Hero /> 
+        <Category/>
+        <Topproducts/>
+        <Service/>
    </Suspense>
     </div>
   )
