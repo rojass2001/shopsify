@@ -6,6 +6,7 @@ import { productfetch } from '../Api';
 import Card from '../Card';
 import { setproducts } from '../../redux/Productslice';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 function Products() {
   
   const {allproduct}=useSelector(state=>state.product)
@@ -28,7 +29,9 @@ function Products() {
       <div className='w-full mt-5 min-h-[900px] overflow-y-auto px-6 md:px-10 gap-y-8 gap-x-2 
          md:gap-x-12 grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
         {allproduct?.map((product)=>(
-        <Card product={product}key={product.id} />
+           
+        <Card product={product} key={product.id} /> 
+        
         ))}
      </div>
     </div>

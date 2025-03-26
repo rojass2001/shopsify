@@ -1,5 +1,6 @@
 import { categoryarray } from './Categoryarray'
 function Category() {
+
   return (
     <div className='w-full '>
       <p className=' text-blue-500 ml-5 font-bold text-2xl'>Shop By Category</p>

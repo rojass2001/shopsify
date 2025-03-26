@@ -21,8 +21,8 @@ function Card({product}) {
          absolute bottom-2 right-2 shadow-gray-300'> <FaCartShopping className='text-xl  '/>
       </div>
     </div>
- </Link>
-   
+ 
+    </Link>
     </>
   )
 }

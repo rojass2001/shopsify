@@ -1,8 +1,9 @@
-import { useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { searchfilter } from '../../redux/Productslice'
-import { useNavigate } from 'react-router-dom'
-function Searchbar() {
+import { useState } from "react"
+import { useDispatch } from "react-redux"
+import { useNavigate } from "react-router-dom"
+import { searchfilter } from "../../redux/Productslice"
+
+function Mobilesearchbar() {
   const navigate=useNavigate()
   const dispatch=useDispatch()
   const [search,setsearch]=useState("")
@@ -11,13 +12,14 @@ function Searchbar() {
    dispatch(searchfilter(search))
    navigate('/filter')
   }
+ 
   return (
-   <form className='hidden gap-1 items-center md:flex' onSubmit={submit}>
-    <input type="text" className='h-[24px] mt-2 w-[150px] text-black
-     bg-white'placeholder='search products' onChange={(e)=>setsearch(e.target.value)}></input>
-    <button type="submit" className='text-white px-3 mt-2 bg-blue-600'>Search</button>
-    </form>
+    <form className="flex w-full" onSubmit={submit}>
+      <input className='w-full  h-8' onChange={(e)=>setsearch(e.target.value)} 
+      placeholder='search product here' type="text"  />
+      <button type="submit" className='bg-blue-600 p-1 '>search</button>
+  </form>
   )
 }
 
-export default Searchbar
+export default Mobilesearchbar

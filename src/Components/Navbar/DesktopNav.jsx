@@ -5,7 +5,6 @@ import Searchbar from './Searchbar';
 import Loginicon from './Loginicon';
 import Mobilenavbar from './Mobilenavbar';
 import { useSelector } from 'react-redux';
-import Mobilesearchbar from './Mobilesearchbar';
 function DesktopNav() {
   const{cartproducts}=useSelector(state=>state.cart)
   const [open,setopen]=useState(false)
@@ -22,7 +21,7 @@ function DesktopNav() {
      <Link to="/products"><p>Products</p></Link>
      <Link to="/contact"><p>Contact</p> </Link>
     </div>
-     <Searchbar/>
+    <div className='hidden md:flex w-[200px] '><Searchbar/></div>
     <div className='flex items-center    '>
      <Loginicon/>
      <Link to="/cart">
@@ -38,7 +37,8 @@ function DesktopNav() {
    </div>
   
   </div>
-    <Mobilesearchbar/>
+  <div className=' md:hidden w-full shadow-md p-2 shadow-gray-500  flex items-center
+     place-content-center'><Searchbar/></div> 
     {open&&
       <Mobilenavbar navbarpopup={navbarpopup}/>
    }
