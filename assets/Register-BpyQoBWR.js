@@ -1,0 +1,1 @@
+import{j as e}from"./index-BlRL9zB_.js";import{L as r}from"./Loginorregister-Crdp8Jly.js";function o(){return e.jsx(e.Fragment,{children:e.jsx(r,{buttonname:"Register",des:"Already have account please Login",link:"/login"})})}export{o as default};
