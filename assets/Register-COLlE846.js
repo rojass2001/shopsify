@@ -1,1 +1,0 @@
-import{j as e}from"./index-BMQNpp_i.js";import{L as r}from"./Loginorregister-bs4inPUp.js";import"./index-B3VK_bIM.js";import"./iconBase-Cxwhlsrq.js";function s(){return e.jsx(e.Fragment,{children:e.jsx(r,{buttonname:"Register",des:"Already have account please Login",link:"/login"})})}export{s as default};
