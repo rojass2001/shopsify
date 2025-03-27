@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
-import Categorys from '../Categorys'
+import Categorys from '../Components/Categorys'
 import { useSelector } from 'react-redux'
-import Card from '../Card'
+import Card from '../Components/Card'
 
 function Filter() {
 const {filterproducts}=useSelector(state=>state.product)
