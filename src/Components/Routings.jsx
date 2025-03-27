@@ -1,18 +1,18 @@
 import { BrowserRouter as Router,Route,Routes  } from 'react-router-dom'
 import { lazy, Suspense } from 'react'
 import DesktopNav from './Navbar/DesktopNav'
-import  Home from './Pages/Home'
-const  Cart=lazy(()=>import('./Pages/Cart'))
+import  Home from '../Pages/Home'
+const  Cart=lazy(()=>import('../Pages/Cart'))
 import Footer from  './Footer'
-import Loader from './Pages/Loader'
-const Productdetails=lazy(()=>import('./Pages/Productdetail'))
-const AllProduct =lazy(()=>import('./Pages/AllProducts')) 
-const Filter=lazy(()=>import('./Pages/Filter'));
-const Login =lazy(()=>import('./Pages/Loginorregister/Login'))
+import Loader from '../Pages/Loader'
+const Productdetails=lazy(()=>import('../Pages/Productdetail'))
+const AllProduct =lazy(()=>import('../Pages/AllProducts')) 
+const Filter=lazy(()=>import('../Pages/Filter'));
+const Login =lazy(()=>import('../Pages/Login'))
 //import Login from './Pages/Loginorregister/Login'
-const Register =lazy( ()=>import('./Pages/Loginorregister/Register'))
-const Contact =lazy(()=>import('./Pages/Contact'))
-const About=lazy(()=>import('./Pages/About'))
+const Register =lazy( ()=>import('../Pages/Register'))
+const Contact =lazy(()=>import('../Pages/Contact'))
+const About=lazy(()=>import('../Pages/About'))
 
 
 function Routings() {

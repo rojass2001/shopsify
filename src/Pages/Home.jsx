@@ -1,8 +1,8 @@
-import Hero from '../Hero'
+import Hero from '../Components/Hero'
 import { lazy, Suspense } from 'react'
-const  Category =lazy(()=>import('../Category'))
-const Topproducts=lazy(()=>import('../Topproducts'))
-import Service from '../Service'
+const  Category =lazy(()=>import('../Components/Category'))
+const Topproducts=lazy(()=>import('../Components/Topproducts'))
+import Service from '../Components/Service'
 import Loader from './Loader'
 
 

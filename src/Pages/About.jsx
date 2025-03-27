@@ -1,4 +1,4 @@
-import abouts from '../Images/about.jpg'
+import abouts from '../Components/Images/about.jpg'
 function About() {
   return (
     <div className="w-full mt-[130px] md:mt-[70px] ">

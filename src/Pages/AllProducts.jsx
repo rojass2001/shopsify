@@ -1,12 +1,10 @@
 /* eslint-disable react/jsx-key */
 import React, { useEffect } from 'react'
-import { PulseLoader } from 'react-spinners';
-import Categorys from '../Categorys';
-import { productfetch } from '../Api';
-import Card from '../Card';
-import { setproducts } from '../../redux/Productslice';
+import Categorys from '../Components/Categorys';
+import { productfetch } from '../Components/Api';
+import Card from '../Components/Card';
+import { setproducts } from '../redux/Productslice';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
 function Products() {
   
   const {allproduct}=useSelector(state=>state.product)
