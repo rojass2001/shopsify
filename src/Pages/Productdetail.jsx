@@ -16,7 +16,7 @@ const {productdetails}=useSelector(state=>state.product)
       <p className='text-2xl'>{productdetails?.title}</p>
       <p className='text-2xl'>Price:${Math.floor(productdetails?.price)}</p>
       <p>{productdetails?.description}</p>
-      <p className='text-black flex items-center'><FaStar/> {productdetails?.rating?.rate}</p>
+      <div className='w-full text-black justify-center flex items-center md:justify-start'><FaStar/> {productdetails?.rating?.rate}</div>
       <button onClick={()=>dispatch(decreaseproductquantity())} className='bg-black w-10 h-7 text-white mr-2'>-</button>{productdetails.quantity}
       <button  onClick={()=>dispatch(increaseproductquantity())} className='bg-black w-10 h-7 ml-2 text-white'>+</button>
       <p className='text-xl'>subtotal:${productdetails?.subtotal}</p>
