@@ -1,0 +1,1 @@
+import{j as s}from"./index-BcnwJLXG.js";const t="/shopsify/assets/about-DCHvDGNn.jpg";function e(){return s.jsx("div",{className:"w-full mt-[130px] md:mt-[70px] ",children:s.jsx("div",{className:"h-screen",children:s.jsx("img",{className:"w-full h-full",src:t})})})}export{e as default};

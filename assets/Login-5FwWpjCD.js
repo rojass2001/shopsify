@@ -1,1 +1,0 @@
-import{j as e}from"./index-BdgrRE6M.js";import{L as o}from"./Loginorregister-CoA47LfN.js";function i(){return e.jsx("div",{children:e.jsx(o,{buttonname:"Login",des:"You dont have account please Register",link:"/register"})})}export{i as default};
