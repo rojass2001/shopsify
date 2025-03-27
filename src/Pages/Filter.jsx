@@ -9,7 +9,7 @@ const {filterproducts}=useSelector(state=>state.product)
     
     <div className='w-full mt-[130px] md:mt-[70px]  '>
     <Categorys/>
-    {filterproducts.length<1?
+    {filterproducts?.length<1?
     <div className='w-full mt-4 h-screen font-bold text-3xl text-center text-blue-600'>No Search Found</div>
     :
     <div className='w-full  mt-5 px-6 md:px-10 gap-y-8 gap-x-2 

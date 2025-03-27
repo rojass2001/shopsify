@@ -1,7 +1,7 @@
 import { FaStar, FaTrash } from 'react-icons/fa'
 import { useDispatch, useSelector } from 'react-redux'
-import Carttotal from '../Carttotal'
-import { cartdecrease, cartincrease, removecart } from '../../redux/Cartslice'
+import Carttotal from '../Components/Carttotal'
+import { cartdecrease, cartincrease, removecart } from '../redux/Cartslice'
 const quantitybutton ="bg-black text-white w-9 h-6"
   function Cart() {
   const dispatch=useDispatch()

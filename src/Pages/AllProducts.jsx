@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
 import React, { useEffect } from 'react'
 import Categorys from '../Components/Categorys';
-import { productfetch } from '../Components/Api';
+import { productfetch } from '../Api';
 import Card from '../Components/Card';
 import { setproducts } from '../redux/Productslice';
 import { useDispatch, useSelector } from 'react-redux';

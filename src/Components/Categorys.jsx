@@ -1,8 +1,9 @@
 import { categoryarray } from './Categoryarray'
-import { productwithcategory } from './Api'
+
 import { useDispatch } from 'react-redux'
 import { categoryfilter } from '../redux/Productslice'
 import { useNavigate } from 'react-router-dom'
+import { productwithcategory } from '../Api'
 function Categorys() {
     const navigate=useNavigate()
     const dispatch=useDispatch()
