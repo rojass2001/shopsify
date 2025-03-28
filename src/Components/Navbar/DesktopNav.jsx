@@ -22,7 +22,7 @@ function DesktopNav() {
      <Link to="/contact"><li>Contact</li> </Link>
      <Link to="/login"><li>Signout</li></Link> 
     </ul>
-    <div className='hidden md:flex w-[200px] '><Searchbar/></div>
+    <div className='hidden md:flex w-[220px] '><Searchbar/></div>
     <div className='flex items-center    '>
      <Loginicon/>
      <Link to="/cart">
