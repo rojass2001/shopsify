@@ -1,5 +1,7 @@
+import { FaLock } from "react-icons/fa"
+import { MdEmail } from "react-icons/md"
 import { Link } from "react-router-dom"
-
+const inputcontainer="w-full px-2 flex items-center bg-white border-[1px] border-black"
 function Login() {
   return (
     <div className='w-full px-2 pt-[115px] min-h-screen flex items-center place-content-center'>
@@ -12,9 +14,13 @@ function Login() {
 
   <div className='w-full md:w-[50%] h-full px-2 flex flex-col items-center place-content-center '>
     <h2 className='font-bold text-3xl mb-5'>Login</h2>
-    <input placeholder="enter email" className='w-full h-9 outline-none mb-7 border-[1px] border-gray-500' />
-    <input placeholder="enter password" className='w-full h-9 outline-none border-[1px] mb-7 border-gray-500' />
-    <button className='bg-blue-600 w-[130px] py-1 text-white font-bold'>Login</button>
+    <span className={inputcontainer}>
+    <MdEmail /> <input className='outline-none w-full h-12 pl-2' placeholder='enter email' type="email"/>
+    </span>
+    <span className={`${inputcontainer} mt-5`}>
+    <FaLock className="text-sm" /> <input className='outline-none w-full h-12 bg-white pl-2' placeholder='enter password' type="password"/>
+    </span>
+    <button className='bg-blue-600 w-[130px] py-1 text-white mt-4 font-bold'>Login</button>
   </div>
       </div>
     </div>

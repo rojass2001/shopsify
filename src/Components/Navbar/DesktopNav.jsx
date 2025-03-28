@@ -15,13 +15,13 @@ function DesktopNav() {
 <div className='nav w-full fixed top-0 right-0 left-0 z-30'>
     <div className=' h-[60px] px-1 flex   items-center  text-white justify-between lg:px-5 '>
      <p className='text-3xl font-bold'>Shopsify</p>
-    <div className='gap-5 text-[16px] hidden md:flex font-bold'>
-     <Link to="/"> <p>Home</p></Link> 
-     <Link to="/about">  <p>About</p></Link> 
-     <Link to="/products"><p>Products</p></Link>
-     <Link to="/contact"><p>Contact</p> </Link>
-     <Link to="/login"><p>Signout</p></Link> 
-    </div>
+    <ul className='gap-5 list-none text-[16px] hidden md:flex font-bold'>
+     <Link to="/"> <li>Home</li></Link> 
+     <Link to="/about">  <li>About</li></Link> 
+     <Link to="/products"><li>Products</li></Link>
+     <Link to="/contact"><li>Contact</li> </Link>
+     <Link to="/login"><li>Signout</li></Link> 
+    </ul>
     <div className='hidden md:flex w-[200px] '><Searchbar/></div>
     <div className='flex items-center    '>
      <Loginicon/>
