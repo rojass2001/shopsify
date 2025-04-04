@@ -16,7 +16,11 @@ function DesktopNav() {
    setopen(!open)
   }
  return (
-  <motion.header className='w-full fixed top-0 right-0 left-0 z-30' style={{backgroundColor:"blue"}}>
+   <motion.header
+     initial={{opacity:0,y:-100}}
+      animate={{opacity:1,y:0}}
+      transition={{duration:0.8,delay:0.5}}
+     className='w-full fixed top-0 right-0 left-0 z-30' style={{ backgroundColor: "blue" }}>
     <div className=' h-[60px] px-1 flex   items-center  text-white justify-between lg:px-5 '>
      <p className='text-2xl font-bold'>Shopsify</p>
     <ul className='gap-5 text-[16px] list-none hidden md:flex font-bold'>
