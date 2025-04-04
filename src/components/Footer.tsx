@@ -6,7 +6,7 @@ function Footer() {
   return (
 <footer className='w-full    bg-blue-600 mt-4 md:px-1 lg:px-[60px] py-2'>
    <div className='w-full py-4 pl-[2px] grid grid-cols-2  md:grid-cols-4  gap-8'>
-     <div className=' space-y-2 text-white font-bold'>
+     <div className='pl-[2px] space-y-2 text-white font-bold'>
         <p className='text-2xl'>Company</p>
         <p>About us</p>
         <p>Our service</p>
@@ -21,7 +21,7 @@ function Footer() {
       <p>Payment Option</p>
 
     </div>
-    <div className='space-y-2 text-white font-bold'>
+    <div className='space-y-2 pl-[2px] text-white font-bold'>
       <p className='text-2xl'>OnlineShopping</p>
       <p>Women</p>
       <p>Men</p>

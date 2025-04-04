@@ -28,14 +28,14 @@ function Topproducts() {
     <div className='w-full bg-gray-100 py-2  px-2 gap-5 md:gap-15  grid grid-cols-2 md:grid-cols-3
      lg:grid-cols-3 font-bold lg:px-[150px] ' >
     {topproducts?.map((a)=>(
-    <div onClick={()=>dispatch(setproductdetail(a))} className='min-h-[200px] relative space-y-2 place-items-center text-center justify-center place-content-center bg-white  text-black shadow-md shadow-gray-300' key={a.id}>
+    <div onClick={()=>dispatch(setproductdetail(a))} className='min-h-[200px] py-2 relative space-y-2 place-items-center text-center justify-center place-content-center bg-white  text-black shadow-md shadow-gray-300' key={a.id}>
      <div className='w-full relative h-[100px]'> <Image  src={a.image} fill quality={100} alt={a.title} /></div>
     <p>{a.title?.slice(0,24)}</p>
     <p>${Math.floor(a.price)}</p>
     <p className='flex items-center'><FaStar/>{a.rating.rate}</p>
-    <div onClick={()=>dispatch(addtocart(a))} className='p-2 rounded-full absolute bottom-2 right-1 text-xl bg-white shadow-md
-     shadow-gray-300'><FaCartShopping  /></div>
-   <Link href={`/productdetails`}>  <button className='bg-black text-white absolute bottom-2  left-2  p-2 rounded-full '>
+    <button onClick={()=>dispatch(addtocart(a))} className='p-2 rounded-full absolute bottom-9 md:bottom-3 right-1 md:right-3    text-xl bg-white shadow-md
+     shadow-gray-300'><FaCartShopping  /></button>
+   <Link href={`/productdetails`}>  <button className='bg-black text-white  p-2 rounded-full '>
     More Details</button></Link>
     </div>
 
