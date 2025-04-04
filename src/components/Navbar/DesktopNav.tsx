@@ -6,6 +6,7 @@ import Loginicon from './Loginicon';
 import Mobilenavbar from './Mobilenavbar';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
+import { motion } from 'framer-motion';
 import { Rootstate } from '@/redux/store';
 //import { useSelector } from 'react-redux';
 function DesktopNav() {
@@ -14,8 +15,8 @@ function DesktopNav() {
   const navbarpopup=()=>{
    setopen(!open)
   }
-  return (
-    <div className='w-full fixed top-0 right-0 left-0 z-30' style={{backgroundColor:"blue"}}>
+ return (
+  <motion.header className='w-full fixed top-0 right-0 left-0 z-30' style={{backgroundColor:"blue"}}>
     <div className=' h-[60px] px-1 flex   items-center  text-white justify-between lg:px-5 '>
      <p className='text-2xl font-bold'>Shopsify</p>
     <ul className='gap-5 text-[16px] list-none hidden md:flex font-bold'>
@@ -44,11 +45,9 @@ function DesktopNav() {
   <div className=' md:hidden w-full shadow-md p-2 shadow-gray-500  flex items-center
      place-content-center'><Searchbar/></div> 
    
-        <Mobilenavbar navbarpopup={navbarpopup} open={open} />
-   
-</div>
-  
-  )
+  <Mobilenavbar navbarpopup={navbarpopup} open={open} />
+ </motion.header> 
+ )
 }
 
 export default DesktopNav

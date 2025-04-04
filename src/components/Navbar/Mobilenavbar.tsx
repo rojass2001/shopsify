@@ -11,7 +11,7 @@ function Mobilenavbar({ navbarpopup, open }: { navbarpopup: () => void, open: bo
   return (
     <AnimatePresence mode="wait">
   {open &&(
-      <motion.div
+      <motion.header
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -100 }}
@@ -23,7 +23,7 @@ function Mobilenavbar({ navbarpopup, open }: { navbarpopup: () => void, open: bo
           )) }
 
          </ul>
-        </motion.div>
+        </motion.header>
   )}
     </AnimatePresence>
   )
