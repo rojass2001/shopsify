@@ -8,8 +8,6 @@ import { Rootstate } from '../redux/store';
 import Link from 'next/link'
 import Image from 'next/image'
 import { productfetch } from '@/api/Api'
-import Loader from './Loader'
-
 function Topproducts() {
     const dispatch=useDispatch()
   const { topproducts } = useSelector((state: Rootstate) => state.product)

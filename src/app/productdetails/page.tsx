@@ -7,7 +7,6 @@ import { Rootstate } from '@/redux/store'
 import Image from 'next/image'
 import { AppDispatch } from '../../redux/store';
 import Loader from '@/components/Loader'
-import { ProductDetails } from '../../commontypes/types';
 
 function Productdetail() {
   const dispatch: AppDispatch = useDispatch()
