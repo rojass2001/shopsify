@@ -28,7 +28,7 @@ function Topproducts() {
     <div className='w-full bg-gray-100 py-2  px-2 gap-5 md:gap-15  grid grid-cols-2 md:grid-cols-3
      lg:grid-cols-3 font-bold lg:px-[150px] ' >
     {topproducts?.map((a)=>(
-    <div onClick={()=>dispatch(setproductdetail(a))} className='min-h-[200px] relative py-2 space-y-2 place-items-center text-center justify-center place-content-center bg-white  text-black shadow-md shadow-gray-300' key={a.id}>
+    <div onClick={()=>dispatch(setproductdetail(a))} className='min-h-[200px] relative space-y-2 place-items-center text-center justify-center place-content-center bg-white  text-black shadow-md shadow-gray-300' key={a.id}>
      <div className='w-full relative h-[100px]'> <Image  src={a.image} fill quality={100} alt={a.title} /></div>
     <p>{a.title?.slice(0,24)}</p>
     <p>${Math.floor(a.price)}</p>
