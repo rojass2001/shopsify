@@ -5,7 +5,8 @@ import Link from "next/link"
       {name:"About",link:"/about"},
       {name:"Products",link:"/products"},
       {name:"Contact",link:"/contact"},
-      {name:"signout",link:"/login"}]
+      { name: "signout", link: "/login" }]
+      
 function Mobilenavbar({ navbarpopup }: { navbarpopup: () => void }) {
   return (
     <div className='bg-blue-800 pt-10 text-center absolute h-screen top-0 left-0 w-[92%]'>

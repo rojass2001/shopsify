@@ -22,8 +22,8 @@ function DesktopNav() {
      <Link href="/"> <li>Home</li></Link>
        <Link href="/about"><li>About</li></Link>
       <Link href="/products"> <li>Products</li></Link>
-      <li>Contact</li> 
-      <li>Signout</li>
+       <Link href="/contact"><li>Contact</li> </Link>
+      <Link href="/login"> <li>Signout</li></Link>
     </ul>
     <div className='hidden md:flex w-[220px] '><Searchbar/></div>
     <div className='flex items-center    '>

@@ -12,13 +12,12 @@ function Hero() {
       p-2 rounded-full mt-4'>Shopsify</button>
     </div>
      <div className='place-content-center h-[400px] '>
-                     <Image
-      
+      <Image
         src="https://www.rixxo.com/wp-content/uploads/2023/06/ecommerce-agency-hero.png"
         alt="Ecommerce agency hero"
         width={300}
         height={300}
-        />
+      />
     </div>
   </div>
 </div>

@@ -8,6 +8,7 @@ import { Rootstate } from '../redux/store';
 import Link from 'next/link'
 import Image from 'next/image'
 import { productfetch } from '@/api/Api'
+import Loader from './Loader'
 
 function Topproducts() {
     const dispatch=useDispatch()
@@ -24,13 +25,13 @@ function Topproducts() {
   return (
     <>
       
-    <div className='w-full'>
-    <p className='text-3xl text-center mb-5 font-bold text-blue-600'>Our Top products</p>
+  <div className='w-full'>
+        <p className='text-3xl text-center mb-5 font-bold text-blue-600'>Our Top products</p>
     <div className='w-full bg-gray-100 py-2  px-2 gap-5 md:gap-15  grid grid-cols-2 md:grid-cols-3
      lg:grid-cols-3 font-bold lg:px-[150px] ' >
     {topproducts?.map((a)=>(
     <div onClick={()=>dispatch(setproductdetail(a))} className='min-h-[200px] py-2 space-y-2 relative place-items-center bg-white  text-black shadow-md shadow-gray-300' key={a.id}>
-       <div className='w-full relative h-[100px]'> <Image  src={a.image} fill quality={100} alt={a.title} /></div>
+     <div className='w-full relative h-[100px]'> <Image  src={a.image} fill quality={100} alt={a.title} /></div>
     <p>{a.title?.slice(0,24)}</p>
     <p>${Math.floor(a.price)}</p>
     <p className='flex items-center'><FaStar/>{a.rating.rate}</p>
@@ -41,8 +42,8 @@ function Topproducts() {
     </div>
 
     ))}
-    </div>
-        </div>
+   </div>     
+  </div>
        
       </>
   )

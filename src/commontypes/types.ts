@@ -21,10 +21,6 @@ export type items = {
         },    
 }
 export type ProductDetails=items & {
- // price: number;
   quantity: number;
   subtotal: number;
-  //image: string;
-   //description: string,
-  //[key: string]: unknown; // To allow additional properties with an unknown type
 }

@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Providers from "@/app/Providers";
 import DesktopNav from "../components/Navbar/DesktopNav";
+import Footer from "@/components/Footer";
 
 const inter= Inter( { subsets: ["latin"] });
 export const metadata: Metadata = {
@@ -25,6 +26,7 @@ export default function RootLayout({
         <Providers>
           <DesktopNav/>
           {children}
+          <Footer/>
           </Providers>
       </body>
     </html>
