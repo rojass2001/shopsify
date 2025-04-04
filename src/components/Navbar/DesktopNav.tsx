@@ -43,9 +43,9 @@ function DesktopNav() {
   </div>
   <div className=' md:hidden w-full shadow-md p-2 shadow-gray-500  flex items-center
      place-content-center'><Searchbar/></div> 
-    {open&&
-      <Mobilenavbar navbarpopup={navbarpopup}/>
-   }
+   
+        <Mobilenavbar navbarpopup={navbarpopup} open={open} />
+   
 </div>
   
   )

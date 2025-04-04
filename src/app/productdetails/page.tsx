@@ -35,7 +35,7 @@ function Productdetail() {
         <p className='text-xl'>subtotal:${productdetails?.subtotal}</p>
         <button className='bg-black w-[100px] h-10 text-white'>Buy now</button>
         <button onClick={() => dispatch(addtocart(productdetails))}
-          className='bg-black w-[100px] h-10 text-white ml-5'>Addtocart</button>
+        className='bg-black w-[100px] h-10 text-white ml-5'>Addtocart</button>
       </div>
     </div>
 }
