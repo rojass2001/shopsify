@@ -21,12 +21,12 @@ const {filterproducts} = useSelector((state: Rootstate) => state.product)
           
           {filterproducts?.length < 0 &&
             <Loader/>
-}
-                  {filterproducts?.map((product) => (
+          }
+          {filterproducts?.map((product) => (
             <Link href="/productdetails" key={product.id}>
-                          <Card product={product} />
+               <Card product={product} />
             </Link>
-))}
+            ))}
     </div>
 }
     </div>

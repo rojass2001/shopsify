@@ -13,6 +13,7 @@ function Hero() {
     </div>
      <div className='place-content-center h-[400px] '>
       <Image
+        className='w-[300px] h-[300px] top-12 right-10'      
         src="https://www.rixxo.com/wp-content/uploads/2023/06/ecommerce-agency-hero.png"
         alt="Ecommerce agency hero"
         width={300}
