@@ -4,7 +4,7 @@ import { FaFacebook } from 'react-icons/fa6'
 
 function Footer() {
   return (
-<div className='w-full    bg-blue-600 mt-4 md:px-1 lg:px-[60px] py-2'>
+<footer className='w-full    bg-blue-600 mt-4 md:px-1 lg:px-[60px] py-2'>
    <div className='w-full py-4 grid grid-cols-2  md:grid-cols-4  gap-6'>
      <div className=' space-y-2 text-white font-bold'>
         <p className='text-2xl'>Company</p>
@@ -39,7 +39,7 @@ function Footer() {
           </div>
       </div>
   </div>
-</div>
+</footer>
   )
 }
 
