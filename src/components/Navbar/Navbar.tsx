@@ -3,20 +3,20 @@ import {  useState } from 'react'
 import { FaBars, FaCartShopping } from "react-icons/fa6";
 import Searchbar from './Searchbar';
 import Loginicon from './Loginicon';
-import Mobilenavbar from './Mobilenavbar';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import { motion } from 'framer-motion';
 import { Rootstate } from '@/redux/store';
+import Mobiledrawer from './Mobiledrawer';
 //import { useSelector } from 'react-redux';
-function DesktopNav() {
+function Navbar() {
   const{cartproducts}=useSelector((state:Rootstate)=>state.cart)
   const [open,setopen]=useState(false)
   const navbarpopup=()=>{
    setopen(!open)
   }
  return (
-   <motion.header
+   <motion.nav
      initial={{opacity:0,y:-100}}
       animate={{opacity:1,y:0}}
       transition={{duration:0.8,delay:0.5}}
@@ -49,9 +49,9 @@ function DesktopNav() {
   <div className=' md:hidden w-full shadow-md p-2 shadow-gray-500  flex items-center
      place-content-center'><Searchbar/></div> 
    
-  <Mobilenavbar navbarpopup={navbarpopup} open={open} />
- </motion.header> 
+  <Mobiledrawer navbarpopup={navbarpopup} open={open} />
+ </motion.nav> 
  )
 }
 
-export default DesktopNav
+export default Navbar

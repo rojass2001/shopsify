@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
       {name:"Contact",link:"/contact"},
       { name: "signout", link: "/login" }]
       
-function Mobilenavbar({ navbarpopup, open }: { navbarpopup: () => void, open: boolean }) {
+function Mobiledrawer({ navbarpopup, open }: { navbarpopup: () => void, open: boolean }) {
   return (
     <AnimatePresence mode="wait">
   {open &&(
@@ -23,10 +23,10 @@ function Mobilenavbar({ navbarpopup, open }: { navbarpopup: () => void, open: bo
           )) }
 
          </ul>
-        </motion.header>
+      </motion.header>
   )}
     </AnimatePresence>
   )
 }
 
-export default Mobilenavbar
+export default Mobiledrawer
