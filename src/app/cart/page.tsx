@@ -5,10 +5,24 @@ import Carttotal from './Carttotal'
 import { cartdecrease, cartincrease, removecart } from '../../redux/cartslice'
 import Image from 'next/image'
 import { Rootstate } from '@/redux/store'
-const quantitybutton ="bg-blue-700 text-white w-9 h-6"
-  function Cart() {
-  const dispatch=useDispatch()
-  const {cartproducts}=useSelector((state:Rootstate)=>state.cart)
+import { useEffect } from 'react'
+const quantitybutton = "bg-blue-700 text-white w-9 h-6";
+import Cookies from 'js-cookie';
+import { toast } from 'react-toastify'
+import { useRouter } from 'next/navigation'
+
+function Cart() {
+  const dispatch = useDispatch();
+  const router=useRouter()
+  const { cartproducts } = useSelector((state: Rootstate) => state.cart);
+  const login = JSON.parse(Cookies.get('login') || '{}');
+  console.log(login)
+  useEffect(() => {
+       if (login===false||null) {
+         toast.warning("please login")
+        router.push('/login')
+       }
+    },[])
   return (
     <div className='w-full pt-[120px] md:pt-[60px] ' >
       <div className='text-3xl py-4 bg-blue-700 font-bold text-white mb-5 text-center'>Your Carts</div> 

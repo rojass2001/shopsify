@@ -36,7 +36,7 @@ export default function useAuth( email?:string,password?:string) {
                     throw new Error("Email and password must be provided.");
                 }
                 await signInWithEmailAndPassword(auth, email, password);
-                toast.success("success")
+                toast.success("login successfully")
                 Cookies.set('login', JSON.stringify(true), { expires: 7 });
                 router.push("/products")
             } catch (error) {
