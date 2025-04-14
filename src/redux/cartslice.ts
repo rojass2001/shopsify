@@ -1,6 +1,7 @@
 "use client"
 import { createSlice } from "@reduxjs/toolkit";
 import { cartproductstype } from "../commontypes/types";
+import { toast } from "react-toastify";
 type initialstates = {
    cartproducts:cartproductstype[],
     totalprice:number,
@@ -17,7 +18,7 @@ const cartslice=createSlice({
     const data=action.payload;
     const itemfind= state.cartproducts.find((item)=>item.id===data.id)
      if(itemfind){
-        alert(itemfind.title +"already exist")
+        toast.error(itemfind.title +"already exist")
      }
      else{
     state.cartproducts.push({
@@ -30,7 +31,7 @@ const cartslice=createSlice({
         subtotal:data.subtotal?data.subtotal:Math.floor(data.price),
     })
      state.totalprice+=data.subtotal?data.subtotal:Math.floor(data.price);
-     alert(data.title+"successfully added to cart")
+     toast.success(data.title+"successfully added to cart")
      }
     },
     cartincrease:(state,action)=>{
