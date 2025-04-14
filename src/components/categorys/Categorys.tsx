@@ -5,6 +5,7 @@ import { categoryfilter } from '@/redux/Productslice'
 import { productwithcategory } from '@/api/Api'
 import Image from 'next/image'
 import { redirect } from 'next/navigation'
+
 function Categorys() {
     const dispatch=useDispatch()
     const productcategorys=async(value:string)=>{

@@ -6,11 +6,13 @@ import Loginicon from './Loginicon';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import { motion } from 'framer-motion';
-import { Rootstate } from '@/redux/store';
+import {  Rootstate } from '@/redux/store';
 import Mobiledrawer from './Mobiledrawer';
-//import { useSelector } from 'react-redux';
+import useAuth from '@/customhooks/useauth';
+
 function Navbar() {
-  const{cartproducts}=useSelector((state:Rootstate)=>state.cart)
+  const { cartproducts } = useSelector((state: Rootstate) => state.cart)
+  const{logout}=useAuth()
   const [open,setopen]=useState(false)
   const navbarpopup=()=>{
    setopen(!open)
@@ -24,11 +26,11 @@ function Navbar() {
     <div className=' h-[60px] px-1 flex   items-center  text-white justify-between lg:px-5 '>
      <p className='text-2xl font-bold'>Shopsify</p>
     <ul className='gap-5 text-[16px] list-none hidden md:flex font-bold'>
-     <Link href="/"> <li>Home</li></Link>
+       <Link href="/"> <li>Home</li></Link>
        <Link href="/about"><li>About</li></Link>
-      <Link href="/products"> <li>Products</li></Link>
+       <Link href="/products"> <li>Products</li></Link>
        <Link href="/contact"><li>Contact</li> </Link>
-      <Link href="/login"> <li>Signout</li></Link>
+       <Link href="/login"> <li onClick={logout}>Signout</li></Link>
     </ul>
     <div className='hidden md:flex w-[220px] '><Searchbar/></div>
     <div className='flex items-center    '>

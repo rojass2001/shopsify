@@ -1,8 +1,6 @@
 import Image from "next/image"
-// <img className='w-[300px] h-[300px] top-12 right-10 'src="https://www.rixxo.com/wp-content/uploads/2023/06/ecommerce-agency-hero.png"/>
-//className="w-[300px] h-[300px] top-12 right-10 "
-//<Image width={300} height={300} alt="jjj" src="https://www.rixxo.com/wp-content/uploads/2023/06/ecommerce-agency-hero.png" />
-function Hero() {  
+
+function Hero(){
   return (
 <div className="w-full ">
   <div className='w-full  place-items-center bg-blue-600 flex justify-around px-2 min-h-[350px]'>

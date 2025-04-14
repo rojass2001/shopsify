@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { useSelector } from 'react-redux'
 import { Rootstate } from '../../redux/store';
+
 function Cartsubtotal() {
   const {totalprice,cartproducts}=useSelector((state:Rootstate)=>state.cart)
   return (

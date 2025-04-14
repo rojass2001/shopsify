@@ -3,12 +3,11 @@ import { configureStore } from "@reduxjs/toolkit";
 import productslice from './Productslice';
 import cartslice from './cartslice';
 
-
 export default function makeStore(){
 return configureStore({
     reducer: {
         product:productslice,
-        cart:cartslice,
+        cart: cartslice,
     }
 })}
 export const store=makeStore()

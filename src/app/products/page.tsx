@@ -7,8 +7,8 @@ import { setproducts } from '@/redux/Productslice';
 import { useDispatch, useSelector } from 'react-redux';
 import Link from 'next/link';
 import { Rootstate } from '@/redux/store';
+
 function Products() {
-  
   const {allproduct}=useSelector((state:Rootstate)=>state.product)
   const dispatch=useDispatch()
     useEffect(() => {

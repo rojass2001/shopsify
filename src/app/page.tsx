@@ -1,4 +1,3 @@
-
 import Service from "@/components/service/Service";
 import Hero from "../components/Hero";
 import HomeCategory from "../components/categorys/HomeCategory";

@@ -24,3 +24,9 @@ export type ProductDetails=items & {
   quantity: number;
   subtotal: number;
 }
+
+export type userinput = {
+        email: string,
+        password:string
+        
+}

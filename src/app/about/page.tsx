@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import img from '../../../public/images/about.jpg'
+
 function About() {
   return (
     <div className="w-full mt-[120px] md:mt-[60px] ">
