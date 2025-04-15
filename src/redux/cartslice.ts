@@ -31,7 +31,7 @@ const cartslice=createSlice({
         subtotal:data.subtotal?data.subtotal:Math.floor(data.price),
     })
      state.totalprice+=data.subtotal?data.subtotal:Math.floor(data.price);
-     toast.success(data.title + "successfully added to cart")
+     toast.success(data.title + " successfully added to cart")
      }
     },
     cartincrease:(state,action)=>{

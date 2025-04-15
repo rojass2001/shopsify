@@ -2,15 +2,16 @@
 import { useState } from "react"
 import { useDispatch } from "react-redux"
 import { searchfilter } from "@/redux/Productslice"
-import { redirect } from "next/navigation"
+import {  useRouter } from "next/navigation"
 
 function Mobilesearchbar() {
+  const router=useRouter()
   const dispatch=useDispatch()
   const [search,setsearch]=useState("")
      const submit=(event:React.FormEvent)=>{
         event.preventDefault()
         dispatch(searchfilter(search))
-        redirect('/filter')
+        router.push('/filter')
       }
   return (
     <form className="flex bg-white w-full" onSubmit={submit}>
