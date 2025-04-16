@@ -11,8 +11,8 @@ import Loader from '@/components/Loader'
 function Productdetail() {
   const dispatch: AppDispatch = useDispatch()
   const { productdetails } = useSelector((state: Rootstate) => state.product);
+  
   return (
-   
     <div className='w-full min-h-screen pt-[130px] place-items-center place-content-center p-2 '>
       {!productdetails ? <Loader /> :
         < div className='w-full   md:w-[70%] h-auto md:h-[500px] shadow-md shadow-slate-400 md flex  flex-col md:flex-row gap-2 p-5 '>

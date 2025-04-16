@@ -1,7 +1,6 @@
 "use client"
 import {  useState } from 'react'
 
-
 export default function useInput<T>(initialValues: T) {
   const [values, setValues] = useState<T>(initialValues);
 

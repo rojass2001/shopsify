@@ -5,10 +5,10 @@ import Card from '@/components/Card'
 import Link from 'next/link'
 import { Rootstate } from '../../redux/store';
 import Loader from '@/components/Loader'
+
 function Filter() {
-
-
-const {filterproducts} = useSelector((state: Rootstate) => state.product)
+  const { filterproducts } = useSelector((state: Rootstate) => state.product)
+  
   return (
     
     <div className='w-full mt-[130px] md:mt-[70px]  '>

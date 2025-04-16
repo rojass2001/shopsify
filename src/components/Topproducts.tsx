@@ -1,28 +1,25 @@
 "use client"
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { setproductdetail, settopproducts } from '@/redux/Productslice'
+import { setproductdetail } from '@/redux/Productslice'
 import { FaCartShopping, FaStar } from 'react-icons/fa6'
 import { addtocart } from '@/redux/cartslice'
 import { Rootstate } from '../redux/store';
 import Link from 'next/link'
 import Image from 'next/image'
-import { productfetch } from '@/api/Api'
-function Topproducts() {
-    const dispatch=useDispatch()
-  const { topproducts } = useSelector((state: Rootstate) => state.product)
+import useFetch from '@/customhooks/useFetch'
 
+function Topproducts() {
+  const dispatch = useDispatch()
+   const { topproducts } = useSelector((state: Rootstate) => state.product)
+  const{fetchproducts}=useFetch('https://fakestoreapi.com/products')
+   
  useEffect(()=>{
-   const productfetchs=async()=>{
-     const response = await productfetch();
-     dispatch(settopproducts(response))
-   }
-   productfetchs()
- },[dispatch])
+  fetchproducts()
+ },[])
     
   return (
-    <>
-      
+    <>  
   <div className='w-full'>
         <p className='text-3xl text-center mb-5 font-bold text-blue-600'>Our Top products</p>
     <div className='w-full bg-gray-100 py-2  px-2 gap-5 md:gap-15  grid grid-cols-2 md:grid-cols-3
@@ -41,9 +38,8 @@ function Topproducts() {
 
     ))}
    </div>     
-  </div>
-       
-      </>
+  </div>   
+  </>
   )
 }
 

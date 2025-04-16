@@ -5,7 +5,6 @@ import Searchbar from './Searchbar';
 import Loginicon from './Loginicon';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
-import { motion } from 'framer-motion';
 import {  Rootstate } from '@/redux/store';
 import Mobiledrawer from './Mobiledrawer';
 import useAuth from '@/customhooks/useauth';
@@ -18,14 +17,11 @@ function Navbar() {
    setopen(!open)
   }
  return (
-   <motion.nav
-     initial={{opacity:0,y:-100}}
-      animate={{opacity:1,y:0}}
-      transition={{duration:0.8,delay:0.5}}
+ <nav
      className='w-full fixed top-0 right-0 left-0 z-30' style={{ backgroundColor: "blue" }}>
     <div className=' h-[60px] px-1 flex   items-center  text-white justify-between lg:px-5 '>
      <p className='text-2xl font-bold'>Shopsify</p>
-    <ul className='gap-5 text-[16px] list-none hidden md:flex font-bold'>
+    <ul className='gap-5 text-[14px] list-none hidden md:flex font-bold'>
        <Link href="/"> <li>Home</li></Link>
        <Link href="/about"><li>About</li></Link>
        <Link href="/products"> <li>Products</li></Link>
@@ -50,9 +46,8 @@ function Navbar() {
   </div>
   <div className=' md:hidden w-full shadow-md p-2 shadow-gray-500  flex items-center
      place-content-center'><Searchbar/></div> 
-   
-  <Mobiledrawer navbarpopup={navbarpopup} open={open} />
- </motion.nav> 
+   <Mobiledrawer navbarpopup={navbarpopup} open={open} />
+ </nav> 
  )
 }
 

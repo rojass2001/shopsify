@@ -9,7 +9,9 @@ return configureStore({
         product:productslice,
         cart: cartslice,
     }
-})}
+})
+}
+
 export const store=makeStore()
 export type Rootstate=ReturnType<typeof store.getState>
 export type AppDispatch=typeof store.dispatch

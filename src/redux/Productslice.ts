@@ -4,7 +4,7 @@ import { items, ProductDetails } from "../commontypes/types";
 //type item = { [key: string]:any};
 const INITIAL_STATE= {
   productdetails: {} as ProductDetails,
-  allproduct: [] as items[],
+  allproducts: [] as items[],
   topproducts: [] as items[],
   filterproducts: [] as items[],
 };
@@ -16,7 +16,7 @@ const productslice=createSlice({
     reducers:{
    
    setproducts:(state,action)=>{
-   state.allproduct=action.payload
+   state.allproducts=action.payload
    }, 
    setproductdetail:(state,action)=>{
     const b= action.payload;
@@ -33,14 +33,14 @@ increaseproductquantity:(state)=>{
     state.productdetails.subtotal-=Math.floor(state.productdetails.price);
     }
  },
-   settopproducts:(state,action)=>{
+ settopproducts: (state, action) => {   
    state.topproducts = action.payload.filter((item:items) => item && item.rating.rate > 4.4)
    },
    categoryfilter:(state,action)=>{
   state.filterproducts=action.payload;
    },
    searchfilter:(state,action)=>{
-      state.filterproducts=state.allproduct.filter((item) => item.title.toLowerCase().includes(action.payload.toLowerCase()));
+    state.filterproducts= state.allproducts.filter((item) => item.title.toLowerCase().includes(action.payload.toLowerCase()));
        }
 }
 })

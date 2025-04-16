@@ -11,7 +11,8 @@ function Forgotpassword() {
     const { values, handlechange } = useInput<Partial<userinput>>({
         email: "",
       })
-      const{resetemail}=useAuth(values.email)
+  const { resetemail } = useAuth(values.email)
+  
   return (
 <div className='w-full px-2 pt-[115px] min-h-screen flex items-center place-content-center'>
   <div className='form w-full pb-8 md:pb-0 md:w-[60%] shadow-md h-auto md:h-[400px] flex flex-col md:flex-row  gap-5 bg-white shadow-gray-300' >

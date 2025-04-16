@@ -2,10 +2,7 @@
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion";
 import useAuth from "@/customhooks/useauth";
-    const mobilenav=[{name:"Home",link:"/"},
-      {name:"About",link:"/about"},
-      {name:"Products",link:"/products"},
-      {name:"Contact",link:"/contact"},]
+import { mobilenav } from "./Mobilenavarray";
       
 function Mobiledrawer({ navbarpopup, open }: { navbarpopup: () => void, open: boolean }) {
   const{logout}=useAuth()
