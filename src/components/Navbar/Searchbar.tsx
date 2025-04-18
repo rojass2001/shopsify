@@ -3,7 +3,6 @@ import useSearch from "@/customhooks/useSearch"
 
 function Mobilesearchbar() {
     const {search,submit,handlechange}=useSearch()
-    
   return (
     <form className="flex bg-white w-full" onSubmit={submit} >
       <input className='w-full pl-1 outline-none h-8 text-black' value={search} onChange={handlechange} 

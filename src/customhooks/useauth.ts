@@ -7,7 +7,8 @@ import Cookies from 'js-cookie';
 
 export default function useAuth( email?:string,password?:string) {
      const router=useRouter()
-     const registersubmit = async() => {
+     const registersubmit = async(e: React.FormEvent) => {
+        e.preventDefault()
         if (!email || !password) {
             toast.error("Email and password are required.");
             return;
@@ -30,7 +31,8 @@ export default function useAuth( email?:string,password?:string) {
     }
 
 
-      const loginsubmit = async () => {
+    const loginsubmit = async (e: React.FormEvent) => {
+          e.preventDefault()
             try {
                 if (!email || !password) {
                     throw new Error("Email and password must be provided.");
@@ -47,12 +49,13 @@ export default function useAuth( email?:string,password?:string) {
             }
     };
     
-    const resetemail = () => {
+    const resetemail = async(e: React.FormEvent) => {
+        e.preventDefault()
             if (!email) {
                 toast.error("Email is required to reset the password.");
                 return;
             }
-            sendPasswordResetEmail(auth, email)
+            await sendPasswordResetEmail(auth, email)
             .then(() => {
                 toast.success("Successfully sent link to email. Please check your email.");
                 }).catch(() => {
@@ -71,8 +74,14 @@ export default function useAuth( email?:string,password?:string) {
                 toast.warning("please login first")
                 }
         }
-
-    return{registersubmit,loginsubmit,resetemail,logout}
+    const cartauthentication=async() => {
+          const login = await JSON.parse(Cookies.get('login') || '{}');
+          if (!login) {
+                  toast.warning("please login")
+                 router.push('/login')
+                }
+     }
+    return{registersubmit,cartauthentication,loginsubmit,resetemail,logout}
 }
 
 

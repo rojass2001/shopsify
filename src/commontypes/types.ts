@@ -1,4 +1,7 @@
 "use client"
+
+import React from "react";
+
 export type cartproductstype = {
         id: number,
         image:string,
@@ -26,7 +29,12 @@ export type ProductDetails=items & {
 }
 
 export type userinput = {
-        email: string,
-        password:string
+  email: string,
+  password:string
         
+}
+export type form = {
+  classname:string,
+  children: React.ReactNode,
+ onsubmit: (e: React.FormEvent<HTMLFormElement>) => Promise<void>
 }

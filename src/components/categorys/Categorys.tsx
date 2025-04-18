@@ -5,7 +5,6 @@ import useFetch from '@/customhooks/useFetch'
 
 function Categorys() {
   const { productwithcategory } = useFetch()
-  
   return (
     <div className='w-full   md:justify-center px-2 overflow-x-auto flex gap-[70px]' >
  

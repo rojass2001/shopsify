@@ -11,7 +11,6 @@ function Footer() {
         <p>About us</p>
         <p>Our service</p>
         <p>Privacy policy</p>
-
     </div>
     <div className=' text-white space-y-2 font-bold'>
       <p className='text-2xl'>Get Help</p>
@@ -19,7 +18,6 @@ function Footer() {
       <p>Shipping</p>
       <p>Returns</p>
       <p>Payment Option</p>
-
     </div>
     <div className='space-y-2 text-white font-bold'>
       <p className='text-2xl'>OnlineShopping</p>
@@ -27,7 +25,6 @@ function Footer() {
       <p>Men</p>
       <p>Jewelery</p>
       <p>Electronics</p>
-
     </div>
      <div className=' space-y-2 text-white font-bold'>
           <p className='text-2xl'>Follow us</p>

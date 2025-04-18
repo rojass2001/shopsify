@@ -2,9 +2,9 @@
 import { categoryarray } from './categoryarray'
 import Image from 'next/image'
 import useFetch from '@/customhooks/useFetch'
+
 function HomeCategory() {
   const{ productwithcategory }=useFetch()
- 
     return (
     
       <div className='w-full '>

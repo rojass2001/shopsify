@@ -5,7 +5,6 @@ import { Rootstate } from '../../redux/store';
 
 function Cartsubtotal() {
   const { totalprice, cartproducts } = useSelector((state: Rootstate) => state.cart)
-  
   return (
   <div className='w-full relative space-y-2 min-h-[200px]  text-blue-700 font-bold border-[4px]'>
     <div className='flex justify-between bg-blue-700 text-white w-full py-2' >Total Items:<span>{cartproducts.length}</span>

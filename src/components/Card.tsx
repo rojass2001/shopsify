@@ -1,4 +1,4 @@
-
+"use client"
 import { FaCartShopping } from 'react-icons/fa6'
 import { setproductdetail } from '@/redux/Productslice' 
 import { addtocart } from '@/redux/cartslice'
@@ -11,7 +11,6 @@ function Card({product}:{product:items}) {
     const dispatch=useDispatch()
   return (
     <>
-
   <div onClick={()=>dispatch(setproductdetail(product))} className='h-[300px] relative 
       text-center space-y-2 text-black font-extrabold bg-white shadow-md rounded-lg  shadow-gray-300'>
       <div className='h-[50%] w-full relative'><Image  fill src={product.image} alt="no image"    /></div>
