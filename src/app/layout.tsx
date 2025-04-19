@@ -5,6 +5,7 @@ import Providers from "@/app/Providers";
 import Footer from "@/components/Footer";
 import Navbar from "../components/Navbar/Navbar";
 import { ToastContainer } from "react-toastify";
+import Tabbar from "@/components/Tabbar";
 
 const inter= Inter( { subsets: ["latin"] });
 export const metadata: Metadata = {
@@ -27,7 +28,8 @@ export default function RootLayout({
           <ToastContainer/>
           <Navbar/>
           {children}
-          <Footer/>
+          <Footer />
+          <Tabbar/>
           </Providers>
       </body>
     </html>

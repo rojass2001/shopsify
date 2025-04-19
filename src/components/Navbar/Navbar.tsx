@@ -1,21 +1,15 @@
 "use client"
-import {  useState } from 'react'
-import { FaBars, FaCartShopping } from "react-icons/fa6";
+import { FaCartShopping } from "react-icons/fa6";
 import Searchbar from './Searchbar';
 import Loginicon from './Loginicon';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import {  Rootstate } from '@/redux/store';
-import Mobiledrawer from './Mobiledrawer';
 import useAuth from '@/customhooks/useauth';
 
 function Navbar() {
   const { cartproducts } = useSelector((state: Rootstate) => state.cart)
   const{logout}=useAuth()
-  const [open,setopen]=useState(false)
-  const navbarpopup=()=>{
-   setopen(!open)
-  }
  return (
  <nav
      className='w-full fixed top-0 right-0 left-0 z-30' style={{ backgroundColor: "blue" }}>
@@ -37,11 +31,10 @@ function Navbar() {
          <div className='w-4 h-4  absolute text-sm flex items-center place-content-center rounded-full bg-blue-600 top-[1px] right-1 animate-bounce'>{cartproducts.length}</div>
        }
     </div>
-    <FaBars onClick={navbarpopup} className='md:hidden text-3xl'/>
    </div>
   </div>
   <div className=' md:hidden w-full shadow-md p-2 shadow-gray-500  flex items-center place-content-center'><Searchbar/></div> 
-   <Mobiledrawer navbarpopup={navbarpopup} open={open} />
+   
  </nav> 
  )
 }
