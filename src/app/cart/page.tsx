@@ -15,7 +15,7 @@ function Cart() {
   const { cartproducts } = useSelector((state: Rootstate) => state.cart);
   useEffect(() => {
     cartauthentication()   
-  }, [cartauthentication])
+  }, [])
   return (
     <div className='w-full pt-[120px] md:pt-[60px] ' >
       <div className='text-3xl py-4 bg-blue-700 font-bold text-white mb-5 text-center'>Your Carts</div> 
@@ -24,7 +24,7 @@ function Cart() {
     <div className='w-full min-h-screen px-2 flex flex-col-reverse md:flex-row gap-3 justify-around'>
         <div className='w-full md:w-[60%]'>
       {cartproducts?.map((a)=>(
-      <div className='w-full mb-5 py-2 h-[280px] md:h-[250px] gap-2 text-blue-700 shadow-md shadow-gray-300 flex' key={a.id}>
+      <div className='w-full mb-5 py-2 h-[300px] md:h-[250px] gap-2 text-blue-700 shadow-md shadow-gray-300 flex' key={a.id}>
         <Image className='w-[40%] h-full' src={a.image} alt='no image' width={100} height={100} />
       <div className='font-bold relative space-y-2'>
           <p className='text-2xl'>{a.title.slice(0,38)}</p>
