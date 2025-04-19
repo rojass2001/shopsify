@@ -39,8 +39,8 @@ export default function useAuth( email?:string,password?:string) {
                 }
                 await signInWithEmailAndPassword(auth, email, password);
                 Cookies.set('login', JSON.stringify(true), { expires: 7 });
-                toast.success("login successfully")
-                 router.push("/products")
+                toast.success("login successfully");
+                router.push("/products");
                  
                
             } catch (error) {
@@ -67,19 +67,22 @@ export default function useAuth( email?:string,password?:string) {
             const login = Cookies.get('login') ? await JSON.parse(Cookies.get('login') as string) : null;
             console.log(login)
             if (login === true) {
-            Cookies.set('login', JSON.stringify(false), { expires: 7 });
-                toast.success("sucessfully logout")
+            Cookies.set('login', JSON.stringify(false),{ expires: 7});
+                toast.success("sucessfully logout");
             }
             else {
-                toast.warning("please login first")
+                toast.warning("please login first");
                 }
         }
     const cartauthentication=async() => {
-          const login = await JSON.parse(Cookies.get('login') || '{}');
+          const login = Cookies.get('login') ? await JSON.parse(Cookies.get('login') as string) : null;
           if (!login) {
-                  toast.warning("please login")
-                 router.push('/login')
-                }
+              router.push('/login');
+              toast.warning("please login");
+        }
+          else {
+              router.push("/cart");
+        }
      }
     return{registersubmit,cartauthentication,loginsubmit,resetemail,logout}
 }
