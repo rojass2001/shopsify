@@ -76,9 +76,9 @@ export default function useAuth( email?:string,password?:string) {
         }
     const cartauthentication=async() => {
           const login = Cookies.get('login') ? await JSON.parse(Cookies.get('login') as string) : null;
-          if (!login) {
-              router.push('/login');
+        if (!login) {
               toast.warning("please login");
+              router.push('/login');
         }
           else {
               router.push("/cart");
