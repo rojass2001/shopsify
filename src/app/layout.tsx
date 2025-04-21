@@ -5,7 +5,7 @@ import Providers from "@/app/Providers";
 import Footer from "@/components/Footer";
 import Navbar from "../components/Navbar/Navbar";
 import { ToastContainer } from "react-toastify";
-import Tabbar from "@/components/Tabbar";
+import Tabbar from "@/components/Tabbar/Tabbar";
 
 const inter= Inter( { subsets: ["latin"] });
 export const metadata: Metadata = {
