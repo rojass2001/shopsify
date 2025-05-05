@@ -22,15 +22,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={inter.className}
-      >
-        <Providers>
-          <ToastContainer/>
-          <Navbar/>
-          {children}
-          <Footer />
-          <Tabbar/>
-          </Providers>
+          className={inter.className}
+        >
+          <Providers>
+            <ToastContainer/>
+            <Navbar />
+          
+            {children}
+            
+            <Footer />
+            <Tabbar/>
+        </Providers>
       </body>
     </html>
   );
