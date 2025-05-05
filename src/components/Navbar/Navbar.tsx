@@ -1,42 +1,53 @@
-"use client"
-import { FaCartShopping } from "react-icons/fa6";
-import Searchbar from './Searchbar';
-import Loginicon from './Loginicon';
-import Link from 'next/link';
-import { useSelector } from 'react-redux';
-import {  Rootstate } from '@/redux/store';
-import useAuth from '@/customhooks/useauth';
+"use client"// client component
+
+import Searchbar from './Searchbar';  // Importing the Searchbar component for searching products
+import Loginicon from './Loginicon';  // Importing the Loginicon component to show the login option
+import Link from 'next/link';  // Importing Next.js Link for navigation between pages
+//import { useSelector } from 'react-redux';  // Importing useSelector to access the Redux store state
+//import { Rootstate } from '@/redux/store';  // Importing the Rootstate type for type-safe access to Redux store
+import Logouticon from "./Logouticon";  // Importing the Logouticon component to display the logout functionality
+import Box from "../Box";  // Importing the Box component for layout and styling
+import Text from "../Text";  // Importing the Text component for displaying text
+import Carticon from "./Carticon";
 
 function Navbar() {
-  const { cartproducts } = useSelector((state: Rootstate) => state.cart)
-  const{logout}=useAuth()
- return (
- <nav
-     className='w-full fixed top-0 right-0 left-0 z-30' style={{ backgroundColor: "blue" }}>
-   <div className=' h-[60px] px-1 flex   items-center  text-white justify-between lg:px-5 '>
-     <p className='text-2xl font-bold'>Shopsify</p>
-    <ul className='gap-5 text-[17px] list-none hidden md:flex font-bold'>
-       <Link href="/"> <li>Home</li></Link>
-       <Link href="/about"><li>About</li></Link>
-       <Link href="/products"> <li>Products</li></Link>
-       <Link href="/contact"><li>Contact</li> </Link>
-       <Link href="/login"> <li onClick={logout}>Signout</li></Link>
-    </ul>
-    <div className='hidden md:flex w-[220px] '><Searchbar/></div>
-    <div className='flex items-center    '>
-     <Loginicon/> 
-     <div className='h-9 w-9 relative flex place-content-center items-center rounded-full bg-white'>
-       <Link href="/cart" ><FaCartShopping className='text-blue-600 text-xl'/></Link> 
-       {cartproducts.length > 0 &&
-         <div className='w-4 h-4  absolute text-sm flex items-center place-content-center rounded-full bg-blue-600 top-[1px] right-1 animate-bounce'>{cartproducts.length}</div>
-       }
-    </div>
-   </div>
-  </div>
-  <div className=' md:hidden w-full shadow-md p-2 shadow-gray-500  flex items-center place-content-center'><Searchbar/></div> 
-   
- </nav> 
- )
+
+  return (
+    // Main navbar container with fixed positioning at the top
+    <nav className='w-full fixed top-0 right-0 left-0 z-30' style={{ backgroundColor: "blue" }}>
+      <Box className=' h-[60px] px-1 flex items-center text-white justify-between lg:px-5 '>
+        {/* Navbar brand/logo */}
+        <Text className='text-2xl font-bold'>Shopsify</Text>
+
+        {/* Navbar links for different pages (Home, About, Products, Contact) */}
+        <ul className='gap-5 text-[17px] list-none hidden md:flex font-bold'>
+          <Link href="/"> <li>Home</li></Link>
+          <Link href="/about"><li>About</li></Link>
+          <Link href="/products"> <li>Products</li></Link>
+          <Link href="/contact"><li>Contact</li> </Link>
+        </ul>
+
+        {/* Searchbar shown only on medium and larger screens */}
+        <Box className='hidden md:flex w-[220px] '><Searchbar /></Box>
+
+        {/* Right-side actions for login/logout and cart */}
+        <Box className='flex items-center'>
+          <Loginicon />  {/* Login icon component */}
+          
+          {/* Cart icon with a notification bubble */}
+          <Carticon/>
+
+          {/* Logout icon component */}
+          <Logouticon />
+        </Box>
+      </Box>
+
+      {/* Searchbar visible on small screens */}
+      <Box className='md:hidden w-full shadow-md p-2 shadow-gray-500 flex items-center place-content-center'>
+        <Searchbar />
+      </Box> 
+    </nav> 
+  );
 }
 
-export default Navbar
+export default Navbar;
