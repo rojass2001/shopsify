@@ -6,7 +6,7 @@ import { increaseproductquantity, decreaseproductquantity } from '@/redux/Produc
 import { addtocart } from '@/redux/cartslice'
 import { Rootstate } from '@/redux/store'
 import Image from 'next/image'
-import { AppDispatch } from '../../../redux/store'
+import { AppDispatch } from '@/redux/store'
 import Loader from '@/components/Loader'
 import Box from '@/components/Box'
 import Text from '@/components/Text'
@@ -21,23 +21,23 @@ function Productdetail() {
 
   return (
     <Box className="w-full min-h-screen pt-[130px] place-items-center place-content-center p-2">
-      
+
       {/* Show loader if product details are not available */}
       {!productdetails ? (
         <Loader />
       ) : (
         <Box className="w-full md:w-[70%] h-auto md:h-[550px] lg:h-[500px] shadow-md shadow-slate-400 flex flex-col md:flex-row gap-4 p-2">
-          
+
           {/* Product image or fallback message */}
           {productdetails?.image ? (
             <Box className="w-full h-[200px] md:w-[50%] md:h-full relative">
-                <Image src={productdetails.image}
-                  className=' w-full h-full'
-                  fill
-                  quality={75}
-                  priority
-                  alt="Product image"
-                />
+              <Image src={productdetails.image}
+                className=' w-full h-full'
+                fill
+                quality={75}
+                priority
+                alt="Product image"
+              />
             </Box>
           ) : (
             <Box className="w-full h-[200px] md:w-[50%] md:h-full bg-gray-200 flex items-center justify-center">
@@ -73,7 +73,7 @@ function Productdetail() {
               {productdetails.quantity}
               <Button
                 onClick={() => {
-                    dispatch(increaseproductquantity())
+                  dispatch(increaseproductquantity())
                 }}
                 className="bg-black w-10 h-7 ml-2 text-white"
               >

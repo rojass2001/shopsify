@@ -24,7 +24,7 @@ function Card({ product }: { product: items }) {
     <Box className='relative'>
 
       {/* Wraps the product info in a link to the detail page */}
-      <Link href={`/productdetails/${product.id}`}>
+      <Link href={`/productdetails`}>
         <Box
           onClick={() => dispatch(setproductdetail(product))} // Dispatch selected product to Redux
           className='h-[300px] text-center space-y-2 text-black font-extrabold bg-white shadow-md rounded-lg shadow-gray-300'
