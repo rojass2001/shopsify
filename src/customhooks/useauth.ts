@@ -1,4 +1,4 @@
- "use client"// This directive ensures that the component is executed on the client side in a Next.js environment.
+"use client"// This directive ensures that the component is executed on the client side in a Next.js environment.
 
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";  // Importing Firebase Authentication methods for user management.
 import { auth } from '@/Backend/Firebase/Firebase';  // Importing the Firebase authentication instance.  // Next.js hook for navigating between pages.
@@ -9,8 +9,8 @@ import { useDispatch } from "react-redux";
 import { Settabstatus } from "@/redux/Tabbarslice";
 
 export default function useAuthentication(email?: string, password?: string) {
-  const dispatch=useDispatch()// Using Redux dispatch for state management
-  const router=useRouter();  // Using the Next.js router for navigation
+  const dispatch = useDispatch()// Using Redux dispatch for state management
+  const router = useRouter();  // Using the Next.js router for navigation
   // Function for user registration.
   const registersubmit = async (e: React.FormEvent) => {
     e.preventDefault();  // Prevent the default form submission behavior.
@@ -43,22 +43,21 @@ export default function useAuthentication(email?: string, password?: string) {
     e.preventDefault();  // Prevent the default form submission behavior.
 
     try {
-      
-      
+
       // Attempt to sign in with the provided credentials.
       if (email && password) {
         await signInWithEmailAndPassword(auth, email, password);  // Sign in the user with Firebase.
         Cookies.set('login', JSON.stringify(true), { expires: 7 }); // Set a cookie indicating the user is logged in.
-        dispatch(Settabstatus(0))// Set the active tab to the first tab Home (index 0). 
+        dispatch(Settabstatus(1))// Set the active tab to the first tab Home (index 0). 
         toast.success("Login successfully");  // Show success message.
-        router.push("/");  // Redirect the user to the products page.
+        router.push("/products");  // Redirect the user to the products page after login.
       }
-      } catch  { // Handle errors during login
-        toast.error("Invalid username or password");  // Show error if login fails.
-        
-      }
-    };
-  
+    } catch { // Handle errors during login
+      toast.error("Invalid username or password");  // Show error if login fails.
+
+    }
+  };
+
 
   // Function to send a password reset email.
   const resetemail = async (e: React.FormEvent) => {
@@ -83,7 +82,7 @@ export default function useAuthentication(email?: string, password?: string) {
   // Function to log out the user.
   const logout = async () => {
     const login = Cookies.get('login') ? await JSON.parse(Cookies.get('login') as string) : null;  // Get the login status from cookies.
-    
+
     if (login === true) {
       // If the user is logged in, log them out.
       Cookies.set('login', JSON.stringify(false), { expires: 7 });
@@ -98,7 +97,7 @@ export default function useAuthentication(email?: string, password?: string) {
   // Function to check if the user is logged in before accessing the cart.
   const cartauthentication = async () => {
     const login = Cookies.get('login') ? await JSON.parse(Cookies.get('login') as string) : null;  // Get the login status from cookies.
-    
+
     if (!login) {
       toast.warning("Please login");  // Show warning if the user is not logged in.
       router.push('/login');  // Redirect to login page.
