@@ -4,7 +4,6 @@ import Service from "@/components/service/Service"
 import Hero from "../components/Hero"
 import HomeCategory from "../components/categorys/HomeCategory"
 import Topproducts from "../components/Topproducts"
-import Box from "@/components/Box"
 import useFetch from "@/customhooks/useFetch"
 import { useEffect } from "react"
 
@@ -19,7 +18,6 @@ export default function Home() {
   return (
     // Main container for the home page
     <main className="w-full mt-[105px] md:mt-[60px]">
-      
       {/* Hero section (e.g., introductory banner, branding) */}
       <Hero />
 
