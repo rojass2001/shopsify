@@ -18,7 +18,7 @@ export default function Home() {
 
   return (
     // Main container for the home page
-    <Box className="w-full mt-[105px] md:mt-[60px]">
+    <main className="w-full mt-[105px] md:mt-[60px]">
       
       {/* Hero section (e.g., introductory banner, branding) */}
       <Hero />
@@ -31,6 +31,6 @@ export default function Home() {
 
       {/* Service component for showing additional services or features */}
       <Service />
-    </Box>
+    </main>
   )
 }
